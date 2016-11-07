@@ -6,6 +6,8 @@
 
 ####1.新建用户
 cmd->到RabbitMQ的安装目录下的一个Sbin目录,正常情况下安装完成后在开始菜单栏可以找到这个目录
+![](/RabbitImg/4.png)
+
 ```
 rabbitmqctl  add_user  hc 123456
 ```
@@ -49,3 +51,7 @@ rabbitmqctl delete_user guest
 rabbitmqctl limt_user_permissions hc
 ```
 ![](/RabbitImg/GetUserInfo.png)
+
+
+
+#二、普通模式发送、接受消息
