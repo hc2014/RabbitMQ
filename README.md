@@ -129,7 +129,7 @@ rabbitmqctl list_queues
 **然后启动接收端**<br />
 ![](/RabbitImg/Revice.png)<br />
  
-**再看一次服务器上 消息**
+**再看一次服务器上 消息**<br />
 ![](/RabbitImg/MsgCount2.png)<br />
 **本来消息数量是1条，启动接受端以后就又变成0条了**<br />
 
