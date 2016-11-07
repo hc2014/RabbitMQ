@@ -56,7 +56,7 @@ rabbitmqctl limt_user_permissions hc
 
 #二、普通模式发送、接受消息
 
-####1.新建一个控制台程序作为发送端
+####1.新建一个控制台程序作为发送端Send
 ```
 static void Main(string[] args)
         {
@@ -84,10 +84,11 @@ static void Main(string[] args)
             Console.ReadLine();
 ```
 
-####2.创建一个控制台程序作为接受端
+####2.创建一个控制台程序作为接受端Revice
 
 ```
-
+static void Main(string[] args)
+        {
             var factory = new ConnectionFactory() { HostName = "localhost", UserName = "hc", Password = "123456" };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
@@ -113,4 +114,22 @@ static void Main(string[] args)
                 Console.ReadLine();
 
             }
+        }
 ```
+先启动Send就会显示发送成功
+![](/RabbitImg/Send.png)
+
+这个是可以查看RabbitMq服务器上的消息
+```
+rabbitmqctl list_queues
+```
+![](/RabbitImg/MsgCount.png)
+本来消息数量是0条，启动发送端以后就变成1条了
+
+然后启动接收端
+![](/RabbitImg/Reivce.png)
+ 
+再看一次服务器上 消息
+![](/RabbitImg/MsgCount2.png)
+本来消息数量是1条，启动接受端以后就又变成0条了
+
