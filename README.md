@@ -116,22 +116,22 @@ static void Main(string[] args)
             }
         }
 ```
-> 先启动Send就会显示发送成功<br />
+**先启动Send就会显示发送成功**
 ![](/RabbitImg/Send.png)<br />
 
-> 这个是可以查看RabbitMq服务器上的消息<br />
+**这个是可以查看RabbitMq服务器上的消息**
 ```
 rabbitmqctl list_queues
 ```
 ![](/RabbitImg/MsgCount.png)<br />
-> 本来消息数量是0条，启动发送端以后就变成1条了<br />
+**本来消息数量是0条，启动发送端以后就变成1条了**
 
-> 然后启动接收端<br />
+**然后启动接收端**
 ![](/RabbitImg/Revice.png)<br />
  
-> 再看一次服务器上 消息<br />
+**再看一次服务器上 消息**
 ![](/RabbitImg/MsgCount2.png)<br />
-> 本来消息数量是1条，启动接受端以后就又变成0条了<br />
+**本来消息数量是1条，启动接受端以后就又变成0条了**
 
 
 
@@ -207,9 +207,9 @@ rabbitmqctl list_queues
         }
 ```
 
-直接用cmd 模式来发送5条数据
+**直接用cmd 模式来发送5条数据**
 ![](/RabbitImg/1.png)
-这个时候两个接收端都分别收到了数据
+**这个时候两个接收端都分别收到了数据**
 ![](/RabbitImg/2.png)
 **特别注意的是,服务端一共发了5条数据,而两个接收端分别收到3条跟2条数据,这个过程是由Rabbi自动去完成的，他自己把消息平均分发给接收端**
 
