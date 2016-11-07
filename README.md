@@ -116,22 +116,22 @@ static void Main(string[] args)
             }
         }
 ```
-**先启动Send就会显示发送成功**
+**先启动Send就会显示发送成功**<br />
 ![](/RabbitImg/Send.png)<br />
 
-**这个是可以查看RabbitMq服务器上的消息**
+**这个是可以查看RabbitMq服务器上的消息**<br />
 ```
 rabbitmqctl list_queues
 ```
 ![](/RabbitImg/MsgCount.png)<br />
-**本来消息数量是0条，启动发送端以后就变成1条了**
+**本来消息数量是0条，启动发送端以后就变成1条了**<br />
 
-**然后启动接收端**
+**然后启动接收端**<br />
 ![](/RabbitImg/Revice.png)<br />
  
 **再看一次服务器上 消息**
 ![](/RabbitImg/MsgCount2.png)<br />
-**本来消息数量是1条，启动接受端以后就又变成0条了**
+**本来消息数量是1条，启动接受端以后就又变成0条了**<br />
 
 
 
