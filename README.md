@@ -34,3 +34,18 @@ rabbitmqctl  set_user_tags yy administrator
 ```
 ![](/RabbitImg/SettingUserTags.png)
 这里就给hc用户设置了超级管理员的角色
+
+
+####5.删除默认用户
+```
+rabbitmqctl delete_user guest
+```
+![](/RabbitImg/DeleteGuest.png)
+
+
+####6.查看用户信息
+
+```
+rabbitmqctl limt_user_permissions hc
+```
+![](/RabbitImg/GetUserInfo.png)
