@@ -119,7 +119,7 @@ static void Main(string[] args)
 > 先启动Send就会显示发送成功
 ![](/RabbitImg/Send.png)
 
-> 这个是可以查看RabbitMq服务器上的消息
+>这个是可以查看RabbitMq服务器上的消息
 ```
 rabbitmqctl list_queues
 ```
