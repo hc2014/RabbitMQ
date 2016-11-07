@@ -133,3 +133,83 @@ rabbitmqctl list_queues
 ![](/RabbitImg/MsgCount2.png)<br />
 > 本来消息数量是1条，启动接受端以后就又变成0条了<br />
 
+
+
+#三、工作队列(分发模式)
+
+####1.新建接收端,完成后打开两个处于等待发送端发送消息 状态
+```
+ static void Main(string[] args)
+        {
+            var factory = new ConnectionFactory();
+            factory.HostName = "localhost";
+            factory.UserName = "hc";
+            factory.Password = "123456";
+
+            using (var connection = factory.CreateConnection())
+            {
+                using (var channel = connection.CreateModel())
+                {
+                    channel.QueueDeclare("hello", false, false, false, null);
+
+                    var consumer = new QueueingBasicConsumer(channel);
+                    channel.BasicConsume("hello", true, consumer);
+
+                    while (true)
+                    {
+                        var ea = (BasicDeliverEventArgs)consumer.Queue.Dequeue();
+
+                        var body = ea.Body;
+                        var message = Encoding.UTF8.GetString(body);
+
+                        int dots = message.Split('.').Length - 1;
+                        Thread.Sleep(dots * 1000);
+
+                        Console.WriteLine("Received {0}", message);
+                        Console.WriteLine("Done");
+                    }
+                }
+            }
+        }
+```
+
+####2.新建发送端
+```
+ static void Main(string[] args)
+        {
+            var factory = new ConnectionFactory();
+            factory.HostName = "localhost";
+            factory.UserName = "hc";
+            factory.Password = "123456";
+
+            using (var connection = factory.CreateConnection())
+            {
+                using (var channel = connection.CreateModel())
+                {
+                    channel.QueueDeclare("hello", false, false, false, null);
+                    string message = GetMessage(args);
+                    var properties = channel.CreateBasicProperties();
+                    properties.DeliveryMode = 2;
+
+                    var body = Encoding.UTF8.GetBytes(message);
+                    channel.BasicPublish("", "hello", properties, body);
+                    Console.WriteLine(" set {0}", message);
+                }
+            }
+
+            Console.ReadKey();
+
+        }
+
+        private static string GetMessage(string[] args)
+        {
+            return ((args.Length > 0) ? string.Join(" ", args) : "Hello World!");
+        }
+```
+
+直接用cmd 模式来发送5条数据
+![](/RabbitImg/1.png)
+这个时候两个接收端都分别收到了数据
+![](/RabbitImg/2.png)
+**特别注意的是,服务端一共发了5条数据,而两个接收端分别收到3条跟2条数据,这个过程是由Rabbi自动去完成的，他自己把消息平均分发给接收端**
+
