@@ -1,4 +1,4 @@
-# RabbitMQ
+﻿# RabbitMQ
 消息队列
 
 #一、基础命令
@@ -242,7 +242,62 @@ rabbitmqctl list_queues
 **这种情况是正常的,但是假如说接收端正在执行 时候、或者说是没有返回给服务端信息的话又是怎样的结果呢？**<br />
 先拿掉**channel.BasicAck(ea.DeliveryTag, false);**其他代码不变<br />
 ![](/RabbitImg/ack2.png)
+**执行接收端,不等它执行完成而是直接关掉接收端**<br />
+![](/RabbitImg/ack3.png)<br />
 查看未应答消息的命令是:
 ```
 rabbitmqctl list_queues name messages_ready messages_unacknowledged
 ```
+
+
+
+#五、消息持久化
+前面用到的消息应答只能保证接收端不会丢失消息但是如果服务端重启了消息还是会丢失,所以这里消息持久化可以保证就算服务器重启了,消息还能保存<br />
+但是并非100%的，因为RabbitMQ往磁盘写入文件还有一个时间差,在这个时间差内还是可能丢失消息的<br />
+消息持久化得先设置channel.queueDeclare的第二个参数为**true**。<br />
+```
+channel.queueDeclare("task_queue", true, false, false, null);
+```
+接受端也同样需要加一句<br />
+**var properties = channel.CreateBasicProperties();**<br />
+**properties.SetPersistent(true);**
+
+```
+static void Main(string[] args)
+        {
+            var factory = new ConnectionFactory();
+            factory.HostName = "localhost";
+            factory.UserName = "hc";
+            factory.Password = "123456";
+
+            using (var connection = factory.CreateConnection())
+            {
+                using (var channel = connection.CreateModel())
+                {
+                    channel.QueueDeclare("task_queue", true, false, false, null);
+
+                    var consumer = new QueueingBasicConsumer(channel);
+                    channel.BasicConsume("task_queue", false, consumer);
+
+                    var properties = channel.CreateBasicProperties();
+                    properties.SetPersistent(true);
+
+                    while (true)
+                    {
+                        var ea = (BasicDeliverEventArgs)consumer.Queue.Dequeue();
+
+                        var body = ea.Body;
+                        var message = Encoding.UTF8.GetString(body);
+
+                        Thread.Sleep(2000);
+
+                        Console.WriteLine("Received {0}", message);
+                        Console.WriteLine("Done");
+
+                        channel.BasicAck(ea.DeliveryTag, false);
+                    }
+                }
+            }
+        }
+```
+![](/RabbitImg/ack5.png)<br />
