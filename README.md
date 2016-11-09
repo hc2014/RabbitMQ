@@ -224,15 +224,71 @@ rabbitmqctl list_queues
  > 发送端代码不变,接受端代码如下:
  >
  ```
- 123
+ static void Main(string[] args)
+        {
+            var factory = new ConnectionFactory();
+            factory.HostName = "localhost";
+            factory.UserName = "hc";
+            factory.Password = "123456";
+
+            using (var connection = factory.CreateConnection())
+            {
+                using (var channel = connection.CreateModel())
+                {
+                    channel.QueueDeclare("hello", false, false, false, null);
+
+                    var consumer = new QueueingBasicConsumer(channel);
+                    channel.BasicConsume("hello", false, consumer);
+
+                    while (true)
+                    {
+                        var ea = (BasicDeliverEventArgs)consumer.Queue.Dequeue();
+
+                        var body = ea.Body;
+                        var message = Encoding.UTF8.GetString(body);
+
+                        Thread.Sleep(5000);
+
+                        Console.WriteLine("Received {0}", message);
+                        Console.WriteLine("Done");
+
+                        channel.BasicAck(ea.DeliveryTag, false);
+                    }
+                }
+            }
+        }
  ```
- > 执行以后，可以看出消息发送以后,在服务器队列里面hello有一条消息,然后执行接受端,等待接收端执行完成以后,消息就没了！.
+ > 执行以后，可以看出消息发送以后,在服务器队列里面hello有一条消息,然后执行接受端,等待接收端执行完成以后,消息就没了！
+ > 
 ![](/RabbitImg/ack1.png)
 
 **这种情况是正常的,但是假如说接收端正在执行 时候、或者说是没有返回给服务端信息的话又是怎样的结果呢？**、
  > 先拿到**channel.BasicAck(ea.DeliveryTag, false);**
  >
- ```
- 123
+        static void Main(string[] args)
+        {
+            var factory = new ConnectionFactory();
+            factory.HostName = "localhost";
+            factory.UserName = "hc";
+            factory.Password = "123456";
+            using (var connection = factory.CreateConnection())
+            {
+                using (var channel = connection.CreateModel())
+                {
+                    channel.QueueDeclare("hello", false, false, false, null);
+                    var consumer = new QueueingBasicConsumer(channel);
+                    channel.BasicConsume("hello", false, consumer);
+                    while (true)
+                    {
+                        var ea = (BasicDeliverEventArgs)consumer.Queue.Dequeue();
+                        var body = ea.Body;
+                        var message = Encoding.UTF8.GetString(body);
+                        Thread.Sleep(5000);
+                        Console.WriteLine("Received {0}", message);
+                        Console.WriteLine("Done");
+                    }
+                }
+            }
+        }
  ```
 ![](/RabbitImg/ack2.png)
