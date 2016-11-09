@@ -221,7 +221,7 @@ rabbitmqctl list_queues
  >
  > 然后最后加一句**channel.BasicAck(ea.DeliveryTag, false);**.
  >
- > 发送端代码不变,接受端代改动如下码如下:
+发送端代码不变,接受端代改动如下码如下
 ```
     channel.BasicConsume("hello", false, consumer);
     while (true)
