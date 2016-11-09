@@ -1,0 +1,7 @@
+E:\hc\新建文件夹\Rabbit\PersistentSend\bin\Debug\PersistentSend.exe.config
+E:\hc\新建文件夹\Rabbit\PersistentSend\bin\Debug\PersistentSend.exe
+E:\hc\新建文件夹\Rabbit\PersistentSend\bin\Debug\PersistentSend.pdb
+E:\hc\新建文件夹\Rabbit\PersistentSend\bin\Debug\RabbitMQ.Client.dll
+E:\hc\新建文件夹\Rabbit\PersistentSend\obj\Debug\PersistentSend.csprojResolveAssemblyReference.cache
+E:\hc\新建文件夹\Rabbit\PersistentSend\obj\Debug\PersistentSend.exe
+E:\hc\新建文件夹\Rabbit\PersistentSend\obj\Debug\PersistentSend.pdb

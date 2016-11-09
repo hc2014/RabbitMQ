@@ -1,0 +1,7 @@
+E:\hc\新建文件夹\Rabbit\WorkQueueWorkTwo\obj\Debug\WorkQueueWorkTwo.csprojResolveAssemblyReference.cache
+E:\hc\新建文件夹\Rabbit\WorkQueueWorkTwo\bin\Debug\WorkQueueWorkTwo.exe.config
+E:\hc\新建文件夹\Rabbit\WorkQueueWorkTwo\bin\Debug\WorkQueueWorkTwo.exe
+E:\hc\新建文件夹\Rabbit\WorkQueueWorkTwo\bin\Debug\WorkQueueWorkTwo.pdb
+E:\hc\新建文件夹\Rabbit\WorkQueueWorkTwo\bin\Debug\RabbitMQ.Client.dll
+E:\hc\新建文件夹\Rabbit\WorkQueueWorkTwo\obj\Debug\WorkQueueWorkTwo.exe
+E:\hc\新建文件夹\Rabbit\WorkQueueWorkTwo\obj\Debug\WorkQueueWorkTwo.pdb

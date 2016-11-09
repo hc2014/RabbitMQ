@@ -1,0 +1,7 @@
+E:\hc\新建文件夹\Rabbit\ackRevice\bin\Debug\ackRevice.exe.config
+E:\hc\新建文件夹\Rabbit\ackRevice\bin\Debug\ackRevice.exe
+E:\hc\新建文件夹\Rabbit\ackRevice\bin\Debug\ackRevice.pdb
+E:\hc\新建文件夹\Rabbit\ackRevice\bin\Debug\RabbitMQ.Client.dll
+E:\hc\新建文件夹\Rabbit\ackRevice\obj\Debug\ackRevice.exe
+E:\hc\新建文件夹\Rabbit\ackRevice\obj\Debug\ackRevice.pdb
+E:\hc\新建文件夹\Rabbit\ackRevice\obj\Debug\ackRevice.csprojResolveAssemblyReference.cache

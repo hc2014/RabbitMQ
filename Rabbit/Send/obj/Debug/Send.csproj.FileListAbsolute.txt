@@ -1,0 +1,13 @@
+E:\hc\新建文件夹\Send\Send\bin\Debug\Send.exe.config
+E:\hc\新建文件夹\Send\Send\bin\Debug\Send.exe
+E:\hc\新建文件夹\Send\Send\bin\Debug\Send.pdb
+E:\hc\新建文件夹\Send\Send\bin\Debug\RabbitMQ.Client.dll
+E:\hc\新建文件夹\Send\Send\obj\Debug\Send.exe
+E:\hc\新建文件夹\Send\Send\obj\Debug\Send.pdb
+E:\hc\新建文件夹\Rabbit\Send\bin\Debug\Send.exe.config
+E:\hc\新建文件夹\Rabbit\Send\obj\Debug\Send.exe
+E:\hc\新建文件夹\Rabbit\Send\obj\Debug\Send.pdb
+E:\hc\新建文件夹\Rabbit\Send\bin\Debug\Send.exe
+E:\hc\新建文件夹\Rabbit\Send\bin\Debug\Send.pdb
+E:\hc\新建文件夹\Rabbit\Send\bin\Debug\RabbitMQ.Client.dll
+E:\hc\新建文件夹\Rabbit\Send\obj\Debug\Send.csprojResolveAssemblyReference.cache

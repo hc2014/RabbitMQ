@@ -1,0 +1,7 @@
+E:\hc\新建文件夹\Rabbit\PersistentRevice\bin\Debug\PersistentRevice.exe.config
+E:\hc\新建文件夹\Rabbit\PersistentRevice\bin\Debug\PersistentRevice.exe
+E:\hc\新建文件夹\Rabbit\PersistentRevice\bin\Debug\PersistentRevice.pdb
+E:\hc\新建文件夹\Rabbit\PersistentRevice\bin\Debug\RabbitMQ.Client.dll
+E:\hc\新建文件夹\Rabbit\PersistentRevice\obj\Debug\PersistentRevice.csprojResolveAssemblyReference.cache
+E:\hc\新建文件夹\Rabbit\PersistentRevice\obj\Debug\PersistentRevice.exe
+E:\hc\新建文件夹\Rabbit\PersistentRevice\obj\Debug\PersistentRevice.pdb

@@ -1,0 +1,13 @@
+E:\hc\新建文件夹\Send\Revice\bin\Debug\Revice.exe.config
+E:\hc\新建文件夹\Send\Revice\bin\Debug\Revice.exe
+E:\hc\新建文件夹\Send\Revice\bin\Debug\Revice.pdb
+E:\hc\新建文件夹\Send\Revice\bin\Debug\RabbitMQ.Client.dll
+E:\hc\新建文件夹\Send\Revice\obj\Debug\Revice.exe
+E:\hc\新建文件夹\Send\Revice\obj\Debug\Revice.pdb
+E:\hc\新建文件夹\Rabbit\Revice\bin\Debug\Revice.exe.config
+E:\hc\新建文件夹\Rabbit\Revice\obj\Debug\Revice.exe
+E:\hc\新建文件夹\Rabbit\Revice\obj\Debug\Revice.pdb
+E:\hc\新建文件夹\Rabbit\Revice\bin\Debug\Revice.exe
+E:\hc\新建文件夹\Rabbit\Revice\bin\Debug\Revice.pdb
+E:\hc\新建文件夹\Rabbit\Revice\bin\Debug\RabbitMQ.Client.dll
+E:\hc\新建文件夹\Rabbit\Revice\obj\Debug\Revice.csprojResolveAssemblyReference.cache

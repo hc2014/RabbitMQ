@@ -1,0 +1,7 @@
+E:\hc\新建文件夹\Rabbit\WorkQueueSend\bin\Debug\WorkQueueSend.exe.config
+E:\hc\新建文件夹\Rabbit\WorkQueueSend\bin\Debug\WorkQueueSend.exe
+E:\hc\新建文件夹\Rabbit\WorkQueueSend\bin\Debug\WorkQueueSend.pdb
+E:\hc\新建文件夹\Rabbit\WorkQueueSend\bin\Debug\RabbitMQ.Client.dll
+E:\hc\新建文件夹\Rabbit\WorkQueueSend\obj\Debug\WorkQueueSend.exe
+E:\hc\新建文件夹\Rabbit\WorkQueueSend\obj\Debug\WorkQueueSend.pdb
+E:\hc\新建文件夹\Rabbit\WorkQueueSend\obj\Debug\WorkQueueSend.csprojResolveAssemblyReference.cache

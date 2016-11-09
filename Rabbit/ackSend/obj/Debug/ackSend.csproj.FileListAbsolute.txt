@@ -1,0 +1,7 @@
+E:\hc\新建文件夹\Rabbit\ackSend\obj\Debug\ackSend.csprojResolveAssemblyReference.cache
+E:\hc\新建文件夹\Rabbit\ackSend\bin\Debug\ackSend.exe.config
+E:\hc\新建文件夹\Rabbit\ackSend\bin\Debug\ackSend.exe
+E:\hc\新建文件夹\Rabbit\ackSend\bin\Debug\ackSend.pdb
+E:\hc\新建文件夹\Rabbit\ackSend\bin\Debug\RabbitMQ.Client.dll
+E:\hc\新建文件夹\Rabbit\ackSend\obj\Debug\ackSend.exe
+E:\hc\新建文件夹\Rabbit\ackSend\obj\Debug\ackSend.pdb

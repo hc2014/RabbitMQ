@@ -1,0 +1,7 @@
+E:\hc\新建文件夹\Rabbit\WorkQueueWorkOne\bin\Debug\WorkQueueWorkOne.exe.config
+E:\hc\新建文件夹\Rabbit\WorkQueueWorkOne\bin\Debug\WorkQueueWorkOne.exe
+E:\hc\新建文件夹\Rabbit\WorkQueueWorkOne\bin\Debug\WorkQueueWorkOne.pdb
+E:\hc\新建文件夹\Rabbit\WorkQueueWorkOne\bin\Debug\RabbitMQ.Client.dll
+E:\hc\新建文件夹\Rabbit\WorkQueueWorkOne\obj\Debug\WorkQueueWorkOne.exe
+E:\hc\新建文件夹\Rabbit\WorkQueueWorkOne\obj\Debug\WorkQueueWorkOne.pdb
+E:\hc\新建文件夹\Rabbit\WorkQueueWorkOne\obj\Debug\WorkQueueWorkOne.csprojResolveAssemblyReference.cache
