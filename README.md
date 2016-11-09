@@ -240,5 +240,9 @@ rabbitmqctl list_queues
 ![](/RabbitImg/ack1.png)<br />
 
 **这种情况是正常的,但是假如说接收端正在执行 时候、或者说是没有返回给服务端信息的话又是怎样的结果呢？**<br />
-先拿掉**channel.BasicAck(ea.DeliveryTag, false);其他代码不变<br />
+先拿掉**channel.BasicAck(ea.DeliveryTag, false);**其他代码不变<br />
 ![](/RabbitImg/ack2.png)
+查看未应答消息的命令是:
+```
+rabbitmqctl list_queues name messages_ready messages_unacknowledged
+```
