@@ -215,13 +215,10 @@ rabbitmqctl list_queues
 
 
 #四、消息应答
- > 消息响应默认是开启的。在之前的例子中使用了no_ack=True标识把它关闭。现在把这个标志关掉.
- >
- > 先设置channel.BasicConsume("hello", **false**, consumer);.
- >
- > 然后最后加一句**channel.BasicAck(ea.DeliveryTag, false);**.
- >
-发送端代码不变,接受端代改动如下码如下
+消息响应默认是开启的。在之前的例子中使用了no_ack=True标识把它关闭。现在把这个标志关掉.<br />
+先设置channel.BasicConsume("hello", **false**, consumer);<br />
+然后最后加一句**channel.BasicAck(ea.DeliveryTag, false);**<br />
+发送端代码不变,接受端代改动如下码如下<br />
 ```
     channel.BasicConsume("hello", false, consumer);
     while (true)
@@ -241,9 +238,8 @@ rabbitmqctl list_queues
 ```
  > 执行以后，可以看出消息发送以后,在服务器队列里面hello有一条消息,然后执行接受端,等待接收端执行完成以后,消息就没了！
  > 
-![](/RabbitImg/ack1.png)
+![](/RabbitImg/ack1.png)<br />
 
-**这种情况是正常的,但是假如说接收端正在执行 时候、或者说是没有返回给服务端信息的话又是怎样的结果呢？**、
- > 先拿到**channel.BasicAck(ea.DeliveryTag, false);其他代码不变**
- >
+**这种情况是正常的,但是假如说接收端正在执行 时候、或者说是没有返回给服务端信息的话又是怎样的结果呢？**<br />
+先拿到**channel.BasicAck(ea.DeliveryTag, false);其他代码不变**<br />
 ![](/RabbitImg/ack2.png)
