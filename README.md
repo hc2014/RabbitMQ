@@ -287,8 +287,6 @@ static void Main(string[] args)
 
                         Console.WriteLine("Received {0}", message);
                         Console.WriteLine("Done");
-
-                        //channel.BasicAck(ea.DeliveryTag, false);
                     }
                 }
             }
