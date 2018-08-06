@@ -17,7 +17,7 @@ rabbitmqctl  add_user  hc 123456
 ####2.创建虚拟主机
 虚拟主机这个概念,很不好懂，看了别人的博客,可以把这个概念理解成c#里面的“名称空间”
 ```
-rabbitmqctl  add_vhoust  hc_mq
+rabbitmqctl  add_vhost  hc_mq
 ```
 这里就创建了一个名称为hc_mq的虚拟主机
 
