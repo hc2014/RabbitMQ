@@ -1,10 +1,10 @@
 ﻿# RabbitMQ
 消息队列
 
-#一、基础命令
+# 一、基础命令
 安装完成RabbitMQ以后，会有一个默认的账户Guest，这个用户得删除,然后新建一个自己的用户，并且赋予管理员权限
 
-####1.新建用户
+#### 1.新建用户
 cmd->到RabbitMQ的安装目录下的一个Sbin目录,正常情况下安装完成后在开始菜单栏可以找到这个目录
 ![](/RabbitImg/4.png)
 
@@ -14,7 +14,7 @@ rabbitmqctl  add_user  hc 123456
 ![](/RabbitImg/CreateUser.png)
 这样就创建了一个username=hc,password=123456的用户了
 
-####2.创建虚拟主机
+#### 2.创建虚拟主机
 虚拟主机这个概念,很不好懂，看了别人的博客,可以把这个概念理解成c#里面的“名称空间”
 ```
 rabbitmqctl  add_vhost  hc_mq
@@ -23,14 +23,14 @@ rabbitmqctl  add_vhost  hc_mq
 
 ![](/RabbitImg/Createvhost.png)
 
-####3.给用户、虚拟主机赋予权限
+#### 3.给用户、虚拟主机赋予权限
 ```
 rabbitmqctl  set_permissions  -p hc_mq hc  ".*"  ".*"  ".*"
 ```
 ![](/RabbitImg/SettingPermissions2.png)
 这里就为hc用户,hc_mq的虚拟主机赋予了所有权限,当然用户跟虚拟主机的权限也可以单独分开来赋权限
 
-####4.设置角色
+#### 4.设置角色
 ```
 rabbitmqctl  set_user_tags yy administrator
 ```
@@ -38,14 +38,14 @@ rabbitmqctl  set_user_tags yy administrator
 这里就给hc用户设置了超级管理员的角色
 
 
-####5.删除默认用户
+#### 5.删除默认用户
 ```
 rabbitmqctl delete_user guest
 ```
 ![](/RabbitImg/DeleteGuest.png)
 
 
-####6.查看用户信息
+#### 6.查看用户信息
 
 ```
 rabbitmqctl limt_user_permissions hc
@@ -56,7 +56,7 @@ rabbitmqctl limt_user_permissions hc
 
 #二、普通模式发送、接受消息
 
-####1.新建一个控制台程序作为发送端Send
+#### 1.新建一个控制台程序作为发送端Send
 ```
 static void Main(string[] args)
         {
@@ -84,7 +84,7 @@ static void Main(string[] args)
             Console.ReadLine();
 ```
 
-####2.创建一个控制台程序作为接受端Revice
+#### 2.创建一个控制台程序作为接受端Revice
 
 ```
 static void Main(string[] args)
@@ -137,7 +137,7 @@ rabbitmqctl list_queues
 
 #三、工作队列(分发模式)
 
-####1.新建接收端,完成后打开两个处于等待发送端发送消息 状态
+#### 1.新建接收端,完成后打开两个处于等待发送端发送消息 状态
 ```
  static void Main(string[] args)
         {
@@ -173,7 +173,7 @@ rabbitmqctl list_queues
         }
 ```
 
-####2.新建发送端
+#### 2.新建发送端
 ```
  static void Main(string[] args)
         {
@@ -220,7 +220,7 @@ rabbitmqctl list_queues
 channel.BasicQos(0, 1, false); 
 ```
 
-#四、消息应答
+# 四、消息应答
 消息响应默认是开启的。在之前的例子中使用了no_ack=True标识把它关闭。现在把这个标志关掉.<br />
 先设置channel.BasicConsume("hello", **false**, consumer);<br />
 然后最后加一句**channel.BasicAck(ea.DeliveryTag, false);**<br />
@@ -257,7 +257,7 @@ rabbitmqctl list_queues name messages_ready messages_unacknowledged
 
 
 
-#五、消息持久化
+# 五、消息持久化
 前面用到的消息应答只能保证接收端不会丢失消息但是如果服务端重启了消息还是会丢失,所以这里消息持久化可以保证就算服务器重启了,消息还能保存<br />
 但是并非100%的，因为RabbitMQ往磁盘写入文件还有一个时间差,在这个时间差内还是可能丢失消息的<br />
 消息持久化得先设置channel.queueDeclare的第二个参数为**true**。<br />
