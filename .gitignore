@@ -1,0 +1,15 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/Rabbit/ackRevice/obj/Debug
+/Rabbit/.vs/Send/DesignTimeBuild
+/Rabbit/PersistentRevice/obj/Debug
+/Rabbit/PersistentSend/obj/Debug
+/Rabbit/ackSend/obj/Debug
+/Rabbit/Revice/obj/Debug
+/Rabbit/Send/obj/Debug
+/Rabbit/WorkQueueSend/obj/Debug
+/Rabbit/WorkQueueWorkOne/obj/Debug
+/Rabbit/WorkQueueWorkTwo/obj/Debug
+/Rabbit/.vs/Send/v15
