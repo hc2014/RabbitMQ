@@ -10,7 +10,7 @@ namespace Send
     {
         static void Main(string[] args)
         {
-            //测试一下git1
+            //测试一下git
             var factory = new ConnectionFactory() { HostName = "localhost", UserName = "hc", Password="123456" };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())

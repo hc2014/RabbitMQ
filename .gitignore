@@ -3,3 +3,12 @@
 ################################################################################
 
 /Rabbit/.vs/Send
+/Rabbit/ackRevice/obj/Debug
+/Rabbit/ackSend/obj/Debug
+/Rabbit/PersistentRevice/obj/Debug
+/Rabbit/PersistentSend/obj/Debug
+/Rabbit/Send/obj/Debug
+/Rabbit/Revice/obj/Debug
+/Rabbit/WorkQueueSend/obj/Debug
+/Rabbit/WorkQueueWorkOne/obj/Debug
+/Rabbit/WorkQueueWorkTwo/obj/Debug
