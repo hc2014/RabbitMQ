@@ -341,4 +341,3 @@ rabbitmq-plugins enable rabbitmq_management
 ![](RabbitImg/6.png)
 
 
-

@@ -5,3 +5,11 @@ E:\hc\新建文件夹\Rabbit\ackRevice\bin\Debug\RabbitMQ.Client.dll
 E:\hc\新建文件夹\Rabbit\ackRevice\obj\Debug\ackRevice.exe
 E:\hc\新建文件夹\Rabbit\ackRevice\obj\Debug\ackRevice.pdb
 E:\hc\新建文件夹\Rabbit\ackRevice\obj\Debug\ackRevice.csprojResolveAssemblyReference.cache
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackRevice\bin\Debug\ackRevice.exe.config
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackRevice\bin\Debug\ackRevice.exe
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackRevice\bin\Debug\ackRevice.pdb
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackRevice\bin\Debug\RabbitMQ.Client.dll
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackRevice\obj\Debug\ackRevice.csproj.CoreCompileInputs.cache
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackRevice\obj\Debug\ackRevice.csproj.CopyComplete
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackRevice\obj\Debug\ackRevice.exe
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackRevice\obj\Debug\ackRevice.pdb

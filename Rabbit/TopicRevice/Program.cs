@@ -1,0 +1,65 @@
+﻿using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
+using RabbitMQ.Client.MessagePatterns;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TopicRevice
+{
+    class Program
+    {
+        const string TopExchangeName = "topic.justin.exchange";
+        //const string TopQueueName = "topic.justin.queue";
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("请输入路由的名称:");
+            var queueName = Console.ReadLine();
+            var connectionFactory = new ConnectionFactory
+            {
+                HostName = "localhost",
+                UserName = "kia",
+                Password = "123456",
+                Protocol = Protocols.AMQP_0_9_1,
+                RequestedFrameMax = UInt32.MaxValue,
+                RequestedHeartbeat = UInt16.MaxValue
+            };
+
+            using (IConnection conn = connectionFactory.CreateConnection())
+            {
+                using (IModel channel = conn.CreateModel())
+                {
+                    //channel.ExchangeDeclare(TopExchangeName, "topic", durable: false, autoDelete: false, arguments: null);
+
+                    var TopQueueName = channel.QueueDeclare().QueueName;
+
+                    
+                    channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
+                    channel.QueueBind(TopQueueName, TopExchangeName, routingKey: queueName);
+                    var consumer = new EventingBasicConsumer(channel);
+                    consumer.Received += (model, ea) =>
+                    {
+                        var msgBody = Encoding.UTF8.GetString(ea.Body);
+                        Console.WriteLine(string.Format("***接收时间:{0}，消息内容：{1}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), msgBody));
+                        int dots = msgBody.Split('.').Length - 1;
+                        System.Threading.Thread.Sleep(dots * 1000);
+                        Console.WriteLine(" [x] Done");
+                        channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+                    };
+                    channel.BasicConsume(TopQueueName, autoAck: false, consumer: consumer);
+
+                    Console.WriteLine("按任意值，退出程序");
+                    Console.ReadKey();
+                }
+            }
+
+
+            Console.WriteLine("处理完成");
+            Console.ReadKey();
+        }
+    }
+}

@@ -15,7 +15,7 @@ namespace ackRevice
         {
             var factory = new ConnectionFactory();
             factory.HostName = "localhost";
-            factory.UserName = "hc";
+            factory.UserName = "kia";
             factory.Password = "123456";
 
             using (var connection = factory.CreateConnection())
@@ -34,7 +34,7 @@ namespace ackRevice
                         var body = ea.Body;
                         var message = Encoding.UTF8.GetString(body);
 
-                        Thread.Sleep(10000);
+                        Thread.Sleep(50);
 
                         Console.WriteLine("Received {0}", message);
                         Console.WriteLine("Done");

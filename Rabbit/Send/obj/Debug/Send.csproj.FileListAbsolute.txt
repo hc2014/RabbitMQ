@@ -11,3 +11,12 @@ E:\hc\新建文件夹\Rabbit\Send\bin\Debug\Send.exe
 E:\hc\新建文件夹\Rabbit\Send\bin\Debug\Send.pdb
 E:\hc\新建文件夹\Rabbit\Send\bin\Debug\RabbitMQ.Client.dll
 E:\hc\新建文件夹\Rabbit\Send\obj\Debug\Send.csprojResolveAssemblyReference.cache
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Send\bin\Debug\Send.exe.config
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Send\bin\Debug\Send.exe
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Send\bin\Debug\Send.pdb
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Send\bin\Debug\RabbitMQ.Client.dll
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Send\obj\Debug\Send.csprojAssemblyReference.cache
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Send\obj\Debug\Send.csproj.CoreCompileInputs.cache
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Send\obj\Debug\Send.csproj.CopyComplete
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Send\obj\Debug\Send.exe
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Send\obj\Debug\Send.pdb

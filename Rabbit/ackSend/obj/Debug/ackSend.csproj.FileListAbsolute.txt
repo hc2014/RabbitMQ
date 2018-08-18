@@ -5,3 +5,12 @@ E:\hc\新建文件夹\Rabbit\ackSend\bin\Debug\ackSend.pdb
 E:\hc\新建文件夹\Rabbit\ackSend\bin\Debug\RabbitMQ.Client.dll
 E:\hc\新建文件夹\Rabbit\ackSend\obj\Debug\ackSend.exe
 E:\hc\新建文件夹\Rabbit\ackSend\obj\Debug\ackSend.pdb
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackSend\bin\Debug\ackSend.exe.config
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackSend\bin\Debug\ackSend.exe
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackSend\bin\Debug\ackSend.pdb
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackSend\bin\Debug\RabbitMQ.Client.dll
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackSend\obj\Debug\ackSend.csprojAssemblyReference.cache
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackSend\obj\Debug\ackSend.csproj.CoreCompileInputs.cache
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackSend\obj\Debug\ackSend.csproj.CopyComplete
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackSend\obj\Debug\ackSend.exe
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\ackSend\obj\Debug\ackSend.pdb

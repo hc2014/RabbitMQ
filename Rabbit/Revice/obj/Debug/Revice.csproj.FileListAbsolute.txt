@@ -11,3 +11,11 @@ E:\hc\新建文件夹\Rabbit\Revice\bin\Debug\Revice.exe
 E:\hc\新建文件夹\Rabbit\Revice\bin\Debug\Revice.pdb
 E:\hc\新建文件夹\Rabbit\Revice\bin\Debug\RabbitMQ.Client.dll
 E:\hc\新建文件夹\Rabbit\Revice\obj\Debug\Revice.csprojResolveAssemblyReference.cache
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Revice\bin\Debug\Revice.exe.config
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Revice\bin\Debug\Revice.exe
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Revice\bin\Debug\Revice.pdb
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Revice\bin\Debug\RabbitMQ.Client.dll
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Revice\obj\Debug\Revice.csproj.CoreCompileInputs.cache
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Revice\obj\Debug\Revice.csproj.CopyComplete
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Revice\obj\Debug\Revice.exe
+C:\Users\hc\Documents\GitHub\RabbitMQ\Rabbit\Revice\obj\Debug\Revice.pdb
