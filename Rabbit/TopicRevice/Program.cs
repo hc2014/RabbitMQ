@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace TopicRevice
@@ -36,10 +37,30 @@ namespace TopicRevice
                     //channel.ExchangeDeclare(TopExchangeName, "topic", durable: false, autoDelete: false, arguments: null);
 
                     var TopQueueName = channel.QueueDeclare().QueueName;
+                    Console.WriteLine($"TopQueueName:{TopQueueName}");
+                    var TopQueueName1 = channel.QueueDeclare().QueueName;
 
-                    
+
                     channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
                     channel.QueueBind(TopQueueName, TopExchangeName, routingKey: queueName);
+
+                    //这里可以监听多个路由
+                    if (queueName == "order.delete.user")
+                    {
+                        channel.QueueBind(TopQueueName, TopExchangeName, routingKey: "order.update.admin");
+
+                        
+                        Console.WriteLine($"TopQueueName1:{TopQueueName1}");
+                        channel.QueueBind(TopQueueName1, "TestExChange", "");
+                        
+                    }
+
+
+
+                   
+
+
+
                     var consumer = new EventingBasicConsumer(channel);
                     consumer.Received += (model, ea) =>
                     {
@@ -49,9 +70,14 @@ namespace TopicRevice
                         System.Threading.Thread.Sleep(dots * 1000);
                         Console.WriteLine(" [x] Done");
                         channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+                        Thread.Sleep(500);
                     };
                     channel.BasicConsume(TopQueueName, autoAck: false, consumer: consumer);
+                    if (queueName == "order.delete.user")
+                    {
+                        channel.BasicConsume(TopQueueName1, autoAck: false, consumer: consumer);
 
+                    }
                     Console.WriteLine("按任意值，退出程序");
                     Console.ReadKey();
                 }

@@ -41,6 +41,7 @@ namespace TopicSend
                     //channel.QueueBind(TopQueueName, TopExchangeName, routingKey: TopicName2);
                     //channel.QueueBind(TopQueueName, TopExchangeName, routingKey: TopicName3);
 
+
                     string vadata = Console.ReadLine();
                     while (vadata != "exit")
                     {
