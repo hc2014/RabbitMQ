@@ -30,4 +30,5 @@
 /Rabbit/WorkQueueWorkOne/bin/
 /Rabbit/WorkQueueWorkTwo/obj/
 /Rabbit/WorkQueueWorkTwo/bin/
-
+*.exe
+*.pdb
